@@ -21,22 +21,42 @@ const Form = () => {
   };
 
   return (
-    <div id="Form" className="p-4 w-2/5 h-3/5" style={boxStyle}>
+    <div id="Form" className="p-4 w-2/6 h-3/5" style={boxStyle}>
       <form onSubmit={handleSubmit}>
-        <h1 className="text-center text-slate-800 text-2xl font-bolder">
+        <h1 className="text-center text-slate-800 text-4xl font-extrabold pb-3">
           Login
         </h1>
         <div className="email-inputField">
           <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            className="border-b-2 border-black bg-transparent w-full"
+          />
         </div>
         <div className="password-inputField">
           <label htmlFor="password">Email</label>
-          <input type="text" name="password" id="password" />
+          <input
+            type="text"
+            name="password"
+            id="password"
+            className="border-b-2 border-black bg-transparent w-full"
+          />
         </div>
-        <button type="submit" onClick={handleClick}>
+        <button
+          type="submit"
+          onClick={handleClick}
+          className="w-full bg-slate-800 my-4 py-3 text-white text-xl font-medium rounded-md"
+        >
           Login
         </button>
+        <p className="w-full text-center text-zinc-800 text-l font-medium">
+          Don't have an account?{" "}
+          <span className="text-slate-900 font-semibold cursor-pointer">
+            Register
+          </span>
+        </p>
       </form>
     </div>
   );
