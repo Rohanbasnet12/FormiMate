@@ -4,8 +4,10 @@ import { basicSchema } from "../../schemas/schema";
 import "./LoginForm.css";
 
 const LoginForm = () => {
-  const onSubmit = () => {
-    alert("Form submitted");
+  const onSubmit = async (values, actions) => {
+    console.log(values);
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    actions.resetForm();
   };
 
   const { values, handleBlur, handleChange, handleSubmit, touched, errors } =
