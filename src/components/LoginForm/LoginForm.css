@@ -1,0 +1,15 @@
+#Login-Form {
+    background: rgba(255, 255, 255, 0.317);
+    box-shadow: 0 8px 32px 0 rgba(8, 10, 26, 0.31);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.414);
+}
+
+input {
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    border: none;
+}
