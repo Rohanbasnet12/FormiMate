@@ -3,11 +3,12 @@ import { useFormik } from "formik";
 import { basicSchema } from "../../schemas/schema";
 import "./LoginForm.css";
 
-const LoginForm = () => {
+const LoginForm = ({ onLoginSuccess }) => {
   const onSubmit = async (values, actions) => {
     console.log(values);
     await new Promise((resolve) => setTimeout(resolve, 500));
     actions.resetForm();
+    onLoginSuccess(); // Call the function passed via props to indicate a successful login
   };
 
   const { values, handleBlur, handleChange, handleSubmit, touched, errors } =
@@ -36,7 +37,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div id="Login-Form" className="z-50 py-4 px-5 w-2/6">
+    <div id="Login-Form" className="z-40 py-4 px-5 w-2/6">
       <form onSubmit={handleSubmit}>
         <h1 className="text-center text-3xl font-extrabold py-4">Login</h1>
         <div className="email-input pt-4">
