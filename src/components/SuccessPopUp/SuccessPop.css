@@ -1,0 +1,19 @@
+/* Responsive Layout */
+
+@media (max-width: 990px) {
+    #success-popUp {
+        width: 55vw;
+    }
+}
+
+@media (max-width: 570px) {
+    #success-popUp {
+        width: 75vw;
+    }
+}
+
+@media (max-width: 570px) {
+    #success-popUp {
+        width: 85vw;
+    }
+}

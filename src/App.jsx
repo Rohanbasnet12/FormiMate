@@ -1,54 +1,33 @@
 import React, { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Background from "./components/Background/Background";
 import LoginForm from "./components/LoginForm/LoginForm";
 import SuccessPopUp from "./components/SuccessPopUp/SuccessPopUp";
 import RegisterForm from "./components/RegisterForm/RegisterForm";
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLoginSuccess = () => {
-    setIsLoggedIn(true);
-  };
-
-  const handleContinue = () => {
-    setIsLoggedIn(false);
-  };
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <LoginForm />,
+    },
+    {
+      path: "/login",
+      element: <LoginForm />,
+    },
+    {
+      path: "/register",
+      element: <RegisterForm />,
+    },
+  ]);
 
   return (
-    <Router>
+    <div>
       <Background />
       <div className="form-wrapper flex items-center justify-center w-full h-screen">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              isLoggedIn ? (
-                <SuccessPopUp onContinue={handleContinue} />
-              ) : (
-                <LoginForm onLoginSuccess={handleLoginSuccess} />
-              )
-            }
-          />
-          <Route
-            path="/login"
-            element={
-              isLoggedIn ? (
-                <SuccessPopUp onContinue={handleContinue} />
-              ) : (
-                <LoginForm onLoginSuccess={handleLoginSuccess} />
-              )
-            }
-          />
-        </Routes>
+        <RouterProvider router={router} />
       </div>
-    </Router>
+    </div>
   );
 };
 

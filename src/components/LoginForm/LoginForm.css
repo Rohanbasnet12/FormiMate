@@ -18,3 +18,23 @@ label {
     font-size: 18px;
     font-weight: 500;
 }
+
+/* Responsive Layout */
+
+@media (max-width: 990px) {
+    #Login-Form {
+        width: 55vw;
+    }
+}
+
+@media (max-width: 570px) {
+    #Login-Form {
+        width: 75vw;
+    }
+}
+
+@media (max-width: 570px) {
+    #Login-Form {
+        width: 85vw;
+    }
+}

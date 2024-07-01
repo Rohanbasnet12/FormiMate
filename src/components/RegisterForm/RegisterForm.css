@@ -18,3 +18,24 @@ label {
     font-size: 18px;
     font-weight: 500;
 }
+
+
+/* Responsive Layout */
+
+@media (max-width: 990px) {
+    #Register-Form {
+        width: 55vw;
+    }
+}
+
+@media (max-width: 570px) {
+    #Register-Form {
+        width: 75vw;
+    }
+}
+
+@media (max-width: 570px) {
+    #Register-Form {
+        width: 85vw;
+    }
+}

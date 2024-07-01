@@ -1,18 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./SuccessPop.css";
 
-const SuccessPopUp = ({ onContinue }) => {
-  const navigate = useNavigate(); // Hook to programmatically navigate
-
-  /**
-   * handleContinue function is called when the continue button is clicked.
-   * It calls the onContinue function and navigates to the login page.
-   */
-  const handleContinue = () => {
-    onContinue();
-    navigate("/login");
-  };
-
+const SuccessPopUp = ({ successMessage, route }) => {
   return (
     <div
       id="success-popUp"
@@ -26,15 +16,14 @@ const SuccessPopUp = ({ onContinue }) => {
       </div>
       <div className="bottom w-full h-full">
         <p className="py-4 px-5 text-center font-medium text-xl">
-          Congratulations! Your account has been successfully logged in!
+          {successMessage}
         </p>
         <div className="continue-btn w-full flex items-center justify-center pt-4">
-          <button
-            className="bg-orange-600 py-2 px-5 rounded-full text-white font-medium text-xl"
-            onClick={handleContinue}
-          >
-            Continue
-          </button>
+          <Link to={route}>
+            <button className="bg-orange-600 py-2 px-5 rounded-full text-white font-medium text-xl">
+              Continue
+            </button>
+          </Link>
         </div>
       </div>
     </div>
