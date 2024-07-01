@@ -78,4 +78,5 @@ Contributions are welcome! Please follow these steps:
 
 ## License
 This project is licensed under the [MIT]() License.
-[Redirect]()
+
+[Redirect](https://rohanbasnet12.github.io/FormiMate/)
