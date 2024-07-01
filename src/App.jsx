@@ -8,6 +8,7 @@ import {
 import Background from "./components/Background/Background";
 import LoginForm from "./components/LoginForm/LoginForm";
 import SuccessPopUp from "./components/SuccessPopUp/SuccessPopUp";
+import RegisterForm from "./components/RegisterForm/RegisterForm";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

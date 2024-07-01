@@ -2,8 +2,12 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const SuccessPopUp = ({ onContinue }) => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Hook to programmatically navigate
 
+  /**
+   * handleContinue function is called when the continue button is clicked.
+   * It calls the onContinue function and navigates to the login page.
+   */
   const handleContinue = () => {
     onContinue();
     navigate("/login");
